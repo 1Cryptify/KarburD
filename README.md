@@ -2,9 +2,9 @@
 ## Plateforme de gestion d'une station service cas de la disponibilite de carburant
 |contributeurs|roles/specialites|
 |----------------|-----------------|
-|NKOUNTCHOU|FRONTEND|
-|FOMEKOUO|CONTROLLEURS|
+|KOUNTCHOU|FRONTEND|
 |EFONTSE|MODELES|
+|FOMEKOUO|CONTROLLEURS|
 
 1). - __premiere commande a taper pour cloner le projet en local__
 
