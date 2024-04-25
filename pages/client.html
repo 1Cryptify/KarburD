@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo"></ion-icon>
+                        </span>
+                        <span class="title">KarburD</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                        </span>
+                        <span class="title">disponibilite des carburants</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                        </span>
+                        <span class="title">Type de carburant</span>
+                    </a>
+                </li>
+				 <li>
+                    <a href="#">
+                        <span class="icon">
+                        </span>
+                        <span class="title">niveau du stock</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+<h1>Les types de carburants :</h1>
+    <table>
+        <tr>
+            <th>Type de carburant</th>
+        </tr>
+        <tr>
+            <td>Essence</td>
+        </tr>
+        <tr>
+            <td>Diesel</td>
+        </tr>
+        <tr>
+            <td>GPL</td>
+        </tr>
+        <tr>
+            <td>Électrique</td>
+        </tr>
+        <tr>
+            <td>Hybride</td>
+        </tr>
+    </table>
+					  <script>
+        function afficherInfos() {
+            var carburant = document.getElementById("carburant").value;
+            var disponibilite = "";
+            var stock = "";
+
+            // Obtention des informations du carburant sélectionné
+            switch (carburant) {
+                case "Essence":
+                    disponibilite = "Disponible";
+                    stock = "100";
+                    break;
+                case "Diesel":
+                    disponibilite = "Indisponible";
+                    stock = "0";
+                    break;
+                case "GPL":
+                    disponibilite = "Disponible";
+                    stock = "50";
+                    break;
+                case "Électrique":
+                    disponibilite = "Disponible";
+                    stock = "20";
+                    break;
+                case "Hybride":
+                    disponibilite = "Indisponible";
+                    stock = "0";
+                    break;
+                default:
+                    disponibilite = "Inconnu";
+                    stock = "N/A";
+            }
+
+            // Affichage des informations
+            document.getElementById("disponibilite").textContent = disponibilite;
+            document.getElementById("stock").textContent = stock;
+        }
+    </script>
+</head>
+<body>
+    <h1>Choisir le type de carburant :</h1>
+    <select id="carburant">
+        <option value="Essence">Essence</option>
+        <option value="Diesel">Diesel</option>
+        <option value="GPL">GPL</option>
+        <option value="Électrique">Électrique</option>
+        <option value="Hybride">Hybride</option>
+    </select>
+    <button onclick="afficherInfos()">Afficher les informations</button>
+    <br>
+    <h2>Informations sur le carburant sélectionné :</h2>
+    <p><strong>Disponibilité :</strong> <span id="disponibilite"></span></p>
+    <p><strong>Stock restant :</strong> <span id="stock"></span></p>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
